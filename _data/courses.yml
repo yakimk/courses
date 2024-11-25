@@ -1,0 +1,4 @@
+- name: "Analysis 1"
+  file: "analysis1"
+- name: "Set Theory"
+  file: "set-theory"
