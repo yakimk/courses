@@ -1,3 +1,1 @@
-# courses
-
-test
+# WLG (Without Loss of Generality)
