@@ -6,21 +6,12 @@ use_latex : true
 permalink: /courses/analysis1/
 ---
 
-{% assign set_pages = site.pages | select: "layout", "set" %}
-{% assign folder_name = page.permalink | split: '/' | slice: - %}
-{{folder_name}}
-{% assign filtered_pages = set_pages | select: "permalink", "/courses/" | append: folder_name %}
+{% assign set_pages = site.pages | where: "layout", "set" %}
+{% assign link = page.permalink %}
+{% assign set_pages = set_pages | where_exp: "page", "page.url contains link" %}
 
-{% for page in filtered_pages %}
-  <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-{% endfor %}
-
-
-
-$$f(x) = \{x \in S \mid y \in K \land (x, y) \in B \}$$
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+<ul>
+  {% for page in set_pages %}
+    <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
