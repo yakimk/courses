@@ -1,5 +1,5 @@
 ---
-layout: course_page
+layout: set
 title: Set 1
 categories: sem1
 # permalink: /courses/analysis1/
