@@ -60,4 +60,4 @@ defaults:
       path: "courses" # Target files inside the courses folder
       type: "pages"   # Apply to pages
     values:
-      permalink: /courses/:basename/
+      permalink: /:path/:basename
