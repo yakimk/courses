@@ -55,3 +55,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+defaults:
+  - scope:
+      path: "courses" # Target files inside the courses folder
+      type: "pages"   # Apply to pages
+    values:
+      permalink: /courses/:basename/
