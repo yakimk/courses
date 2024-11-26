@@ -63,17 +63,25 @@ So $x \notin \overline{A}$. Contradiction.
 <hr>
 ## Ex.6
 
-We show first that $f$ continuous at $x$ $\iff$ for arbitrary nbhd $V$ of $f(x)$. There exists a nbhd $U$ of $x$, s.t. 
-$f(U) \subseteq V$.
+We show it for general metric spaces.
+
+Let $X$ and $Y$ be metric spaces.
+
+$(1) \implies (3)$
+
+Let $f: X \rightarrow Y$ be continuous and let $A \subseteq Y$. 
+Now let $x \in f^{-1}(\mathring{A})$. Since $\mathring{A}$ is open we can choose an $ɛ$-ball 
+$B_{\varepsilon}(f(x)) \subseteq \mathring{A}$ 
+containing $f(x)$. By continuity of $f$, for all $\varepsilon \gt 0$ we can choose $\delta \gt 0$, 
+s.t. $f\[B_{\delta}(x)\] \subseteq B_{\varepsilon}(f(x))$ and hence 
+$B_{\delta}(x) \subseteq f^{-1}\[B_{\varepsilon}(f(x))\] \subseteq f^{-1}(\mathring{A}) \subseteq f^{-1}(A)$.
+But $B_{\delta}(x)$ is an open nbhd of $x$ contained in $f^{-1}(A)$ and so 
+$x \in B_{\delta}(x) \subseteq {f^{-1}(A)}^{\circ}$.
+
+$(2) \implies (3)$
 
 
-$\implies$
 
-Let $f$ be continuous. 
-
-$(1) \implies (2)$
-
-Let $f: \mathbb{R} \rightarrow \mathbb{R}$ be continuous.
 
 
 <hr>
